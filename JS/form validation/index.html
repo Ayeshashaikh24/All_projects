@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>this is heading </h1>
+<form  onsubmit="return validation()"  >
+
+<div>
+<lable>name</label>
+<input type="text" id="name" autocomplete="off">
+<span id="user"></span>
+
+</div>
+<input type="submit" id="submit"/>
+
+</from>
+
+</body>
+<script>
+
+function validation(){
+let ans=document.getElementById("name").value
+if(ans==""){
+    document.getElementById("user").innerHTML="pls fill name feild";
+
+return false;
+}
+
+}
+</script>
+</html>
+

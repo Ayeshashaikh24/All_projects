@@ -1,1 +1,26 @@
+ import axios from "axios";
+  import React from "react";
+  
+  
+  
+  export default function App() {
+    const [post, setPost] = useState();
+  
+    useEffect(() => {
+      axios.get("https://reqres.in/api/users/3"
+      ).then((response) => {
+        setPost(response.data);
+      });
+    },[] );
+  
+    if (!post) return null;
+  
+    return (
+      <div>
+      <h2>{post.data.id}</h2>
+        <h1>{post.data.first_name}</h1>
+     
+      </div>
+    );
+  }
 

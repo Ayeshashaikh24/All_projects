@@ -1,1 +1,32 @@
+import React, { useState } from 'react'
 
+
+
+
+function App(){
+  const [set ,setstate]=useState();
+const [cube,setcube] =useState();
+  const Incnum =()=>{
+      let b=Math.pow(set,3);
+
+      setcube(b.toString());
+  }
+    return(
+        <>
+        <heder> 
+        <h1>Hello Ayesha</h1></heder>
+     <input type="number"  value={set} onChange={(e)=>{
+         setstate(e.target.value);
+     }}></input>
+  
+     <button onClick={Incnum}> Click Button </button>
+<h1>{cube}</h1>
+<footer>
+   google link: <button onClick={()=>window.open('https://www.google.com')}> Click me</button>
+</footer>
+
+     
+        </>
+    )
+}
+export default App;

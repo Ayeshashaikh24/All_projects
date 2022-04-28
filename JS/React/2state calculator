@@ -1,1 +1,34 @@
+import React, { useState } from 'react'
 
+function App(){
+  const [Value,setValue]=useState();
+  const [val,setval]=useState ();
+  const [btn,setbtn]=useState();
+  
+ 
+  return(
+    <>
+      <input type="number"  value={Value} onChange ={(e)=>setValue(e.target.value)}/> <br />
+
+      <input type="number"  value={val} onChange ={(e)=>setval(e.target.value)}/>
+
+ 
+ 
+      <button onClick={()=> {setbtn( 
+        parseInt(Value) + parseInt(val))}}> Add</button>
+
+      <button onClick={()=> {setbtn(
+        Value - val)}}> sub</button>
+
+      
+
+      
+      <button onClick={()=> {setbtn(Value * val)}}> mul</button>
+
+      <button onClick={()=> {setbtn(Value / val)}}> div</button>
+
+          {btn}
+    </>
+  )
+}
+export default App;

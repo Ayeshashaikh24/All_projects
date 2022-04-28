@@ -1,0 +1,47 @@
+import React, { useState } from 'react'
+
+function App(){
+  const [set ,setstate]=useState();
+const [cube,setcube] =useState();
+const [mail,setmail]=useState();
+const [mailiid,setmailid]=useState();
+const[birth,setbirth]=useState();
+const[date,setdate]=useState();
+  const Incnum =()=>{
+    setcube(set)
+    setmailid(mail)
+    setdate(birth)
+
+  }
+    return(
+        <>
+        <heder> 
+        <h1>Hello Ayesha</h1></heder>
+     <input type="text"  value={set} onChange={(e)=>{
+         setstate(e.target.value);
+     }}></input> <br />
+
+<input type="email"  value={mail} onChange={(e)=>{
+         setmail(e.target.value);
+     }}></input>
+
+<input type="date"  value={birth} onChange={(e)=>{
+         setbirth(e.target.value);
+     }}></input>
+
+
+
+ <button onClick={Incnum}> Click Button </button>
+<h1>your name is:{cube}</h1> 
+<h1>your gmail is :{mailiid} </h1>
+<h1>your birth data is :{date}
+</h1>
+{/* <footer>
+   google link: <button onClick={()=>window.open('https://github.com/Ayeshashaikh24/All_projects/tree/main/JS/React')}> Click me</button>
+</footer> */}
+
+     
+        </>
+    )
+}
+export default App;

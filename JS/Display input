@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Name: <input type="text" id="fname" >
+
+last name: <input type="text" id="lname">
+Email: <input type="text" id="email">
+<p id="result"> </p>
+
+<button onclick="myfun()">SUBMIT</button>
+
+<script>
+
+
+  //take input and after click on butten print input
+ function myfun() {
+     document.getElementById("result").innerHTML = document.getElementById('fname').value +" " +
+  document.getElementById('lname').value + " " +
+     document.getElementById('email').value;
+  }
+</script>
+
+</body>
+</html>

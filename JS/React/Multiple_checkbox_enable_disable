@@ -1,1 +1,26 @@
+import React from "react";
+import{useState} from 'react'
+
+export default function App() {
+
+  const [checkboxStatus, setCheckboxStatus] = useState(Array(3).fill(false));
+
+  function buttonHandler(index){
+    let status = [...checkboxStatus];
+    status[index] = !status[index]
+    setCheckboxStatus(status)
+  }
+
+  return (
+    <div className="App">
+     {Array(3).fill(0).map((_, index) => 
+     <> <br /><em> Acceept Terms And Condions</em>
+     <input type="checkbox" checked={checkboxStatus[index]} onChange={() => buttonHandler(index)} />
+     </>)}
+      
+      <button disabled={checkboxStatus.filter(status => status === true).length !== 3}>Click Me</button>
+
+    </div>
+  );
+}
 

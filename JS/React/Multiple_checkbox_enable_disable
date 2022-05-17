@@ -14,8 +14,8 @@ export default function App() {
   return (
     <div className="App">
      {Array(3).fill(0).map((_, index) => 
-     <> <br /><em> Acceept Terms And Condions</em>
-     <input type="checkbox" checked={checkboxStatus[index]} onChange={() => buttonHandler(index)} />
+     <> <br />
+     <input type="checkbox" checked={checkboxStatus[index]} onChange={() => buttonHandler(index)}  /><em>: Acceept Terms And Condions</em>
      </>)}
       
       <button disabled={checkboxStatus.filter(status => status === true).length !== 3}>Click Me</button>
@@ -23,4 +23,3 @@ export default function App() {
     </div>
   );
 }
-

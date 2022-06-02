@@ -21,7 +21,8 @@ export default function App() {
 
     <div className="App">
       {data.map((item) => (
-      <>{item.name},{item.id},</>
+      <li>{item.name},
+      {item.id}</li>
 
         
       ))}

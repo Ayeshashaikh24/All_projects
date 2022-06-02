@@ -1,0 +1,31 @@
+import React from 'react'
+
+
+export default function App() {
+  const data = [
+    {
+    name:'Ayesha',
+      id: 1
+    },
+    {
+      name:'fija',
+      id: 2
+    },
+    {
+     name:'jara', 
+      id: 3
+    }
+  ];
+  return (
+    <>
+
+    <div className="App">
+      {data.map((item) => (
+      <>{item.name},{item.id},</>
+
+        
+      ))}
+    </div>
+    </>
+  );
+}
